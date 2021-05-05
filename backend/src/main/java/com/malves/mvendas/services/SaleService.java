@@ -1,5 +1,7 @@
 package com.malves.mvendas.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.malves.mvendas.dto.SaleDTO;
+import com.malves.mvendas.dto.SaleSuccessDTO;
+import com.malves.mvendas.dto.SaleSumDTO;
 import com.malves.mvendas.entities.Sale;
 import com.malves.mvendas.repositories.SaleRepository;
 import com.malves.mvendas.repositories.SellerRepository;
@@ -25,5 +29,15 @@ public class SaleService {
 		sellerRepository.findAll();
 		Page<Sale> result = repository.findAll(pageable);
 		return result.map(x -> new SaleDTO(x));
+	}
+	
+	@Transactional(readOnly = true)
+	public List<SaleSumDTO> amountGroupedBySeller() {
+		return repository.amountGroupedBySeller();
+	}
+	
+	@Transactional(readOnly = true)
+	public List<SaleSuccessDTO> successGroupedBySeller() {
+		return repository.successGroupedBySeller();
 	}
 }
