@@ -69,7 +69,6 @@ const BarChart = () => {
             series={chartData.series}
             type="bar"
             height="240"
-            
         />
     );
 }
