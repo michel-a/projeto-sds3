@@ -35,3 +35,10 @@ html, body {
 .text-primary {
     color: var(--color-primary) !important;
 }
+
+/*
+estilo para mudar a cor de fundo do jumbotron
+.conteudo-home {
+    background-color: #a1a1a1;
+}
+*/
