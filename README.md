@@ -17,7 +17,7 @@ Esta aplicação consiste em exibir um dashboard a partir de dados fornecidos po
 ![Web 3](https://github.com/michel-a/projeto-sds3/blob/master/assets/layout-3.png)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual](https://github.com/michel-a/projeto-sds3/blob/master/assets/diagrama-de-classes.png)
 
 # Tecnologias utilizadas
 ## Back end
